@@ -1,0 +1,88 @@
+body {
+    background-color: #bb9457;
+    color: #432818;
+    opacity: 0;
+    animation: pageFade 1s ease-out forwards;
+}
+
+/* Whole page fade */
+@keyframes pageFade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Element fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Zain', sans-serif;
+    font-size: 5em;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.4s;
+}   
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    font-family: 'Zain', sans-serif;
+    color: #6f1d1b;
+    font-weight: 700;
+    font-size: 1.5em;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 1s;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.7s;
+}   
+
+.img-container img {
+    width: 150px;
+    height: auto; /* Keeps aspect ratio */
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 1.4s;
+}
+
+.btn {
+    min-width: 150px;
+    padding: 12px 24px;
+    font-size: 1.3em;
+    text-align: center;
+    border-radius: 50px; /* makes it pill/round */
+    background-color: #6f1d1b;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn:hover {
+    background-color: #432818;
+    transform: scale(1.08);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
